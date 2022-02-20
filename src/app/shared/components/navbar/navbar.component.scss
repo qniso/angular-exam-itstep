@@ -1,0 +1,23 @@
+.navbar-row {
+    background-color: rgb(124, 124, 197);
+    display: flex;
+    justify-content: space-around;
+    p {
+        margin-top: 0.8rem;
+        color: white;
+    }
+    div {
+        width: 20%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        a {
+            text-decoration: none;
+            color: white;
+        }
+    }
+    mat-icon {
+        margin-top: 0.7rem;
+        color: white;
+    }
+}

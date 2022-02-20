@@ -1,0 +1,34 @@
+<div *ngIf="todocard" class="change-card" #card>
+    <div>
+        <mat-form-field appearance="outline">
+            <mat-label>Change todo</mat-label>
+            <input matInput [(ngModel)]="todocard.name">
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Choose a date</mat-label>
+            <input matInput [matDatepicker]="picker" [(ngModel)]="todocard.date">
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Change details</mat-label>
+            <input matInput [(ngModel)]="todocard.details">
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <mat-label>Change tegs</mat-label>
+            <input matInput [(ngModel)]="todocard.tegs">
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Priority</mat-label>
+            <mat-select [(ngModel)]="todocard.priority">
+                <mat-option *ngFor="let item of priority" [value]="[item.priority]">
+                    {{item.priority}}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+
+    </div>
+
+
+</div>
